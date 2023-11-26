@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Car Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <header>
+    <h1>Rental Car Hub <i class="fa-solid fa-car fa-bounce "></i></h1>
+  </header>
+  <div class="settings-bar" onclick="toggleMenu()">
+  <i class="fa-solid fa-bars fa-2x "></i>
+  </div>
+  <nav class="mobile-menu">
+    
+    <ul>
+      <li class="active"><a href="#" onclick="showSection('home')">Home <i class="fa-solid fa-house fa-beat"></i></a></li>
+      <li><a href="#" onclick="showSection('cars')">Cars <i class="fa-solid fa-car fa-beat"></i></a></li>
+      <li><a href="#" onclick="showSection('about')">About <i class="fa-solid fa-user fa-beat"></i></a></li>
+      <li><a href="#" onclick="showSection('contact')">Contact <i class="fa-solid fa-phone fa-beat"></i></a></li>
+    </ul>
+  </nav>
+
+  <section id="home" class="content-section">
+    <h2>Welcome to Rental Car Hub!</h2>
+    <p>Explore our diverse fleet of premium cars and book your rental seamlessly.</p>
+    <button onclick="showSection('cars')">View Cars</button>
+  </section>
+
+  <section id="cars" class="content-section">
+    <h2>Cars</h2>
+    <p>View our available cars and choose the one that suits your needs.</p>
+
+    <label for="rentalDate">Select Rental Date:</label>
+    <input type="date" id="rentalDate" name="rentalDate">
+    
+    <div class="car-gallery">
+        <div class="car-item">
+            <img src="./image/car 1..webp" alt="Car 1">
+            <div class="car-details">
+                <h3>CRETA</h3>
+                <p class="price">$50 per day</p>
+                <a href="#" class="rent-now-button" onclick="rentNow('CRETA')">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="car-item">
+            <img src="./image/car 2.webp" alt="Car 2">
+            <div class="car-details">
+                <h3>INNOVA</h3>
+                <p class="price">70 per day</p>
+                <a href="#" class="rent-now-button" onclick="rentNow('INNOVA')">Rent Now</a>
+            </div>
+        </div>
+
+        <div class="car-gallery">
+          <div class="car-item">
+              <img src="./image/car 3.webp" alt="Car 3">
+              <div class="car-details">
+                  <h3>SWIFT</h3>
+                  <p class="price">$25 per day</p>
+                  <a href="#" class="rent-now-button" onclick="rentNow('SWIFT')">Rent Now</a>
+              </div>
+          </div>
+       
+    </div>
+</section>
+
+  <section id="about" class="content-section">
+    <h2>About Us</h2>
+    <p>
+      Welcome to Rental Car Hub, your trusted partner for premium car rentals and exceptional travel experiences. At Rental Car Hub, we believe in making your journey as memorable as the destinations you visit.
+
+Our Mission
+Our mission is to provide you with a seamless and stress-free car rental experience. Whether you're exploring a new city or embarking on a road trip adventure, we aim to be your reliable companion on the road.
+
+Why Choose Rental Car Hub?
+Diverse Fleet: Discover a diverse fleet of top-quality vehicles, ranging from sleek sedans to spacious SUVs and luxurious cars.
+Easy Booking: Our user-friendly online platform allows you to browse, book, and manage your car rental with just a few clicks.
+Customer-Centric Service: We prioritize your satisfaction and safety. Our dedicated support team is available to assist you throughout your rental journey.
+Affordable Rates: Enjoy competitive and transparent pricing. We believe in providing value without compromising on quality.
+Our Commitment
+Rental Car Hub is committed to delivering excellence in every aspect of our service. From the moment you book your car to the time you return it, we strive to exceed your expectations.
+
+    </p>
+  </section>
+
+  <section id="contact" class="content-section">
+    <h2>Contact Us </h2>
+    <p>
+      Have questions or need assistance? Feel free to reach out to our customer support team. We're here to make your car rental experience extraordinary.
+      
+      Thank you for choosing Rental Car Hub. Let's embark on a journey together! & for more enquires please contact :<ul>
+        <li>974 138 7341  <i class="fa-solid fa-phone "></i></li>
+        <li>963 217 2837  <i class="fa-solid fa-phone "></i></li>
+       </ul</p>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <label for="phone"> Phone no:</label>
+      <input type="phone"> 
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <div class="social icons">
+      <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#" target="_blank"> <i class="fa-brands fa-instagram"></i>
+      <a href="tel:+919741387341" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+    <p>&copy; 2023 Rental Car Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
